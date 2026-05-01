@@ -89,12 +89,14 @@ export default function FeaturedWork() {
               </div>
               
               <div className="flex items-center gap-4 mt-auto pt-4 border-t border-zinc-800/50">
-                <a href={project.github} className="flex items-center gap-1.5 text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+                <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-sm font-medium text-zinc-400 hover:text-white transition-colors">
                   <GithubIcon className="w-4 h-4" /> Code
                 </a>
-                <a href={project.live} className="flex items-center gap-1.5 text-sm font-medium text-zinc-400 hover:text-white transition-colors">
-                  <ExternalLink className="w-4 h-4" /> Live Demo
-                </a>
+                {project.live && project.live !== "#" && (
+                  <a href={project.live} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+                    <ExternalLink className="w-4 h-4" /> Live Demo
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>
