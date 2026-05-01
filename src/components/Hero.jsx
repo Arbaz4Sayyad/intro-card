@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FileText, Mail, ArrowRight, Globe } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./ui/Icons";
 import { cn } from "../utils";
+import profileImg from "../assets/profile.png";
 
 export default function Hero() {
   return (
@@ -18,7 +19,7 @@ export default function Hero() {
         <div className="relative inline-block mb-8">
           <div className="w-28 h-28 md:w-32 md:h-32 rounded-full p-1 bg-gradient-to-b from-zinc-700 to-zinc-900 shadow-xl overflow-hidden">
             <img 
-              src="/profile.png" 
+              src={profileImg} 
               alt="Arbaz Sayyad" 
               className="w-full h-full object-cover object-top rounded-full bg-zinc-800"
             />
