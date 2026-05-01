@@ -5,7 +5,7 @@ import { GithubIcon } from "./ui/Icons";
 const projects = [
   {
     title: "AI Meeting Notes Pipeline",
-    problem: "Scalable async transcription pipeline reducing manual note-taking effort by 70%.",
+    problem: <>Engineered a scalable async transcription pipeline using Kafka, reducing manual note-taking effort by <b>70%</b>.</>,
     tech: ["Spring Boot", "Kafka", "Gemini API", "PostgreSQL", "React"],
     github: "https://github.com/Arbaz4Sayyad/AI-Meeting-Notes",
     live: "https://drive.google.com/file/d/1FHvGXISMotO7OLaQqvoh8OhpSmw_mzg7/view",
@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "Insurance Claims System",
-    problem: "Distributed claims processing on Kubernetes handling 10K+ daily requests with high availability.",
+    problem: <>Designed a distributed claims engine on Kubernetes handling <b>10K+ daily requests</b> with high availability and fault tolerance.</>,
     tech: ["Spring Boot", "Kubernetes", "Kafka", "OAuth2", "MySQL"],
     github: "https://github.com/Arbaz4Sayyad/Insurance-Eligibility-Claims-Processing-System",
     live: "#",
@@ -23,12 +23,13 @@ const projects = [
   },
   {
     title: "Spring Ecosystem Contributions",
-    problem: "Core contributor to Spring Kafka and Spring Framework resolving distributed systems issues.",
+    problem: <><b>Core Contributor</b> to Spring Kafka & Spring Framework. Resolving critical distributed systems issues for the global Java community.</>,
     tech: ["Java", "Spring Kafka", "Spring Framework", "Distributed Systems"],
     github: "https://github.com/Arbaz4Sayyad/spring-contributions-showcase",
     live: "#",
     color: "from-rose-500/20 to-orange-500/5",
     borderColor: "group-hover:border-rose-500/50",
+    badge: "Core Contributor"
   }
 ];
 
@@ -62,8 +63,13 @@ export default function FeaturedWork() {
             <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${project.color} transition-opacity duration-500 pointer-events-none`} />
             
             <div className="relative p-6 h-full flex flex-col">
-              <div className="mb-4">
+              <div className="flex justify-between items-start mb-4">
                 <Code2 className="w-8 h-8 text-zinc-500 group-hover:text-zinc-300 transition-colors duration-300" />
+                {project.badge && (
+                  <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-rose-500/20 text-rose-400 border border-rose-500/30 rounded-full">
+                    {project.badge}
+                  </span>
+                )}
               </div>
               
               <h3 className="text-xl font-semibold text-zinc-100 mb-2 group-hover:text-white transition-colors duration-300">

@@ -54,7 +54,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           className="text-lg md:text-xl font-medium text-indigo-400 mb-6"
         >
-          Software Engineer- Backend | Java | Spring Boot | Microservices
+          Backend Software Engineer | Specialized in Distributed Systems & Scalable Microservices
         </motion.p>
 
         <motion.p
@@ -63,7 +63,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
           className="max-w-2xl mx-auto text-lg text-zinc-400 mb-10 leading-relaxed"
         >
-          Building scalable systems powering real-world applications. Specializing in Java, Spring Boot, and high-performance microservices.
+          Engineering high-performance backends for production systems at scale. Core contributor to the Spring Ecosystem.
         </motion.p>
 
         <motion.div

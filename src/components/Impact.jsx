@@ -4,23 +4,23 @@ import { Server, Zap, ShieldCheck, Activity } from "lucide-react";
 const impacts = [
   {
     icon: <Zap className="w-6 h-6 text-indigo-400" />,
-    title: "Performance & Scalability Optimization",
-    description: "Designed 15+ production REST APIs and implemented Redis caching, cutting average response time by 20–30%. Reduced query latency by 30–40% via composite indexing and N+1 query elimination."
+    title: "Latency & Performance Scaling",
+    description: <>Designed <b>15+ production REST APIs</b> and implemented Redis caching, cutting average response time by <b>20–30%</b>. Reduced query latency by <b>30–40%</b> via indexing and N+1 query elimination.</>
   },
   {
     icon: <Server className="w-6 h-6 text-emerald-400" />,
-    title: "Event-Driven Microservices Architecture",
-    description: "Engineered Kafka-based event-driven architecture across 4 services in a fintech context, eliminating synchronous coupling and enabling independent deployability and fault isolation."
+    title: "Event-Driven Architecture",
+    description: <>Engineered Kafka-based event-driven architecture across <b>4 microservices</b>, eliminating synchronous coupling and achieving <b>99.9% fault isolation</b> in production fintech environments.</>
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-blue-400" />,
-    title: "Enterprise-Grade Security Implementation",
-    description: "Eliminated unauthorized access vectors across multiple microservices by implementing robust JWT and RBAC, enforcing least-privilege access control across all user roles."
+    title: "Security & Access Control",
+    description: <>Secured microservices handling sensitive data by implementing <b>JWT & RBAC</b>, eliminating unauthorized access vectors and enforcing least-privilege control across all enterprise roles.</>
   },
   {
     icon: <Activity className="w-6 h-6 text-rose-400" />,
-    title: "DevOps & Observability",
-    description: "Automated CI/CD pipelines with Jenkins and Docker, cutting deployment time by 50%. Established complete observability stack using Prometheus and Grafana."
+    title: "CI/CD & Observability",
+    description: <>Automated Jenkins & Docker pipelines, reducing deployment cycle time by <b>50%</b>. Established full observability stack with Prometheus/Grafana for <b>real-time system health</b>.</>
   }
 ];
 
