@@ -99,19 +99,35 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
-          className="mt-10 flex items-center justify-center gap-5"
+          className="mt-12 flex items-center justify-center gap-4"
         >
-          <a href="https://github.com/Arbaz4Sayyad" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-zinc-300 transition-colors">
-            <GithubIcon className="w-6 h-6" />
+          <a 
+            href="https://github.com/Arbaz4Sayyad" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="group relative p-3 rounded-2xl bg-zinc-900/50 border border-zinc-800/50 text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 transition-all duration-300 backdrop-blur-sm"
+          >
+            <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 rounded-full" />
+            <GithubIcon className="w-6 h-6 relative z-10 group-hover:scale-110 transition-transform duration-300" />
           </a>
-          <a href="https://linkedin.com/in/arbaz-sayyad" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-blue-400 transition-colors">
-            <LinkedinIcon className="w-6 h-6" />
+          <a 
+            href="https://linkedin.com/in/arbaz-sayyad" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="group relative p-3 rounded-2xl bg-zinc-900/50 border border-zinc-800/50 text-zinc-400 hover:text-blue-400 hover:border-blue-500/20 transition-all duration-300 backdrop-blur-sm"
+          >
+            <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 rounded-full" />
+            <LinkedinIcon className="w-6 h-6 relative z-10 group-hover:scale-110 transition-transform duration-300" />
           </a>
-          <a href="mailto:arbazsayyad.dev@gmail.com" className="text-zinc-500 hover:text-rose-400 transition-colors">
-            <Mail className="w-6 h-6" />
+          <a 
+            href="mailto:arbazsayyad.dev@gmail.com" 
+            className="group relative p-3 rounded-2xl bg-zinc-900/50 border border-zinc-800/50 text-zinc-400 hover:text-rose-400 hover:border-rose-500/20 transition-all duration-300 backdrop-blur-sm"
+          >
+            <div className="absolute inset-0 bg-rose-500/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 rounded-full" />
+            <Mail className="w-6 h-6 relative z-10 group-hover:scale-110 transition-transform duration-300" />
           </a>
         </motion.div>
       </motion.div>
