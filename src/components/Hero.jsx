@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Mail, ArrowRight, Globe } from "lucide-react";
+import { FileText, Mail, ArrowRight, Globe, Code2 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./ui/Icons";
 import { cn } from "../utils";
 import profileImg from "../assets/profile.png";
@@ -18,9 +18,9 @@ export default function Hero() {
       >
         <div className="relative inline-block mb-8">
           <div className="w-28 h-28 md:w-32 md:h-32 rounded-full p-1 bg-gradient-to-b from-zinc-700 to-zinc-900 shadow-xl overflow-hidden">
-            <img 
-              src={profileImg} 
-              alt="Arbaz Sayyad" 
+            <img
+              src={profileImg}
+              alt="Arbaz Sayyad"
               className="w-full h-full object-cover object-top rounded-full bg-zinc-800"
             />
           </div>
@@ -61,10 +61,23 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-          className="max-w-2xl mx-auto text-lg text-zinc-400 mb-10 leading-relaxed"
+          className="max-w-2xl mx-auto text-lg text-zinc-400 mb-6 leading-relaxed"
         >
-          Engineering high-performance backends for production systems at scale. Core contributor to the Spring Ecosystem.
+          Engineering high-performance backends for production systems at scale.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+          className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-400/90 font-medium mb-12 backdrop-blur-sm group cursor-default hover:bg-emerald-500/10 hover:border-emerald-500/20 transition-all duration-300"
+        >
+          <div className="relative flex items-center justify-center">
+            <div className="absolute inset-0 bg-emerald-500/20 blur-md rounded-full animate-pulse group-hover:bg-emerald-500/40 transition-all duration-300" />
+            <Code2 className="w-5 h-5 relative z-10" />
+          </div>
+          <span className="text-sm md:text-base tracking-tight">Contributor to the Spring Ecosystem</span>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
