@@ -85,7 +85,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           className="flex flex-wrap items-center justify-center gap-4"
         >
-          <a href="#" className="flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-100 text-zinc-950 font-semibold hover:bg-white hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300">
+          <a href="https://arbaz4sayyad.github.io/my-resume/Arbaz_Sayyad_Software_Engineer_Backend_Resume.pdf" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-100 text-zinc-950 font-semibold hover:bg-white hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300">
             <FileText className="w-4 h-4" />
             View Resume
           </a>
