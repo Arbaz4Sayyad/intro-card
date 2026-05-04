@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { FileText, Mail, ArrowRight, Globe, Code2 } from "lucide-react";
+import { FileText, Mail, ArrowRight, Globe, Code2, ChevronDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./ui/Icons";
 import { cn } from "../utils";
 import profileImg from "../assets/profile.png";
 
 export default function Hero() {
   return (
-    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 flex flex-col items-center justify-center text-center px-4">
+    <section className="relative min-h-screen pt-16 pb-8 md:pt-24 md:pb-12 flex flex-col items-center justify-center text-center px-4">
       {/* Background Subtle Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none" />
 
@@ -16,7 +16,7 @@ export default function Hero() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="relative z-10"
       >
-        <div className="relative inline-block mb-8">
+        <div className="relative inline-block mb-4">
           <div className="w-28 h-28 md:w-32 md:h-32 rounded-full p-1 bg-gradient-to-b from-zinc-700 to-zinc-900 shadow-xl overflow-hidden">
             <img
               src={profileImg}
@@ -33,7 +33,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-          className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-sm font-medium text-zinc-300 backdrop-blur-md"
+          className="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-sm font-medium text-zinc-300 backdrop-blur-md"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-500" />
           Open to opportunities
@@ -43,7 +43,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-100 mb-4"
+          className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-100 mb-2"
         >
           Arbaz Sayyad
         </motion.h1>
@@ -52,7 +52,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-          className="text-lg md:text-xl font-medium text-indigo-400 mb-6"
+          className="text-lg md:text-xl font-medium text-indigo-400 mb-3"
         >
           Backend Software Engineer | Specialized in Distributed Systems & Scalable Microservices
         </motion.p>
@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-          className="max-w-2xl mx-auto text-lg text-zinc-400 mb-6 leading-relaxed"
+          className="max-w-2xl mx-auto text-lg text-zinc-400 mb-3 leading-relaxed"
         >
           Engineering high-performance backends for production systems at scale.
         </motion.p>
@@ -70,7 +70,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-          className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-400/90 font-medium mb-12 backdrop-blur-sm group cursor-default hover:bg-emerald-500/10 hover:border-emerald-500/20 transition-all duration-300"
+          className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-400/90 font-medium mb-6 backdrop-blur-sm group cursor-default hover:bg-emerald-500/10 hover:border-emerald-500/20 transition-all duration-300"
         >
           <div className="relative flex items-center justify-center">
             <div className="absolute inset-0 bg-emerald-500/20 blur-md rounded-full animate-pulse group-hover:bg-emerald-500/40 transition-all duration-300" />
@@ -102,7 +102,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
-          className="mt-12 flex items-center justify-center gap-4"
+          className="mt-6 flex items-center justify-center gap-4"
         >
           <a 
             href="https://github.com/Arbaz4Sayyad" 
@@ -129,6 +129,24 @@ export default function Hero() {
             <div className="absolute inset-0 bg-rose-500/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 rounded-full" />
             <Mail className="w-6 h-6 relative z-10 group-hover:scale-110 transition-transform duration-300" />
           </a>
+        </motion.div>
+
+        {/* Animated Scroll Down Arrow - fixed at bottom center */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.9, ease: "easeOut" }}
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center"
+        >
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="flex flex-col items-center gap-0.5 text-zinc-500 hover:text-zinc-300 transition-colors duration-300 cursor-pointer"
+            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+          >
+            <ChevronDown className="w-6 h-6" />
+            <ChevronDown className="w-6 h-6 -mt-3 opacity-50" />
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>
