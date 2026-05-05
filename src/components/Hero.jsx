@@ -89,7 +89,7 @@ export default function Hero() {
             <FileText className="w-4 h-4" />
             View Resume
           </a>
-          <a href="https://arbaz4sayyad.github.io/MyPortfolio/" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-800 border border-zinc-700 text-zinc-100 font-medium hover:bg-zinc-700 transition-all duration-300">
+          <a href="https://arbaz4sayyad.github.io/" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-800 border border-zinc-700 text-zinc-100 font-medium hover:bg-zinc-700 transition-all duration-300">
             <Globe className="w-4 h-4" />
             Portfolio
           </a>
