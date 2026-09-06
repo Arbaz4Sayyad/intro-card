@@ -1,7 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #4f46e5; /* indigo-600 */
+  --color-primary: var(--accent-color, #4f46e5);
+}
+
+:root {
+  --accent-color: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @layer base {
@@ -10,7 +19,23 @@
   }
 }
 
-/* Hide scrollbar for cleaner look (optional) */
+/* Custom glassmorphism and subtle radial spotlight helpers */
+.glass-panel {
+  background: rgba(18, 18, 23, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-pill {
+  background: rgba(14, 14, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 20px -5px var(--accent-glow);
+}
+
+/* Custom sleek scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
